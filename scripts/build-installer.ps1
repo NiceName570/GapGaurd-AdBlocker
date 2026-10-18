@@ -31,7 +31,7 @@ function Add-PackageFile([string]$source, [string]$entry) {
     [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($archive, $source, $entry, [IO.Compression.CompressionLevel]::Optimal) | Out-Null
 }
 try {
-    $extensionRoot = Join-Path $taskRoot 'dist'
+    $extensionRoot = Join-Path $taskRoot 'extension'
     foreach ($file in Get-ChildItem -LiteralPath $extensionRoot -Recurse -File) {
         $relative = $file.FullName.Substring($extensionRoot.Length + 1).Replace('\', '/')
         Add-PackageFile $file.FullName ('extension/' + $relative)

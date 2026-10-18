@@ -79,9 +79,9 @@ npm run check
 npm test
 ```
 
-The first build downloads supplemental filter lists and caches them in the ignored `sources/` folder. It also generates `dist/` and build reports locally. Later builds reuse that cache; a fresh clone may fetch newer supplemental filters than the published release.
+The first build downloads supplemental filter lists and caches them in the ignored `sources/` folder. It also generates `extension/` and build reports locally. Later builds reuse that cache; a fresh clone may fetch newer supplemental filters than the published release.
 
-Open your browser's extensions manager, enable Developer mode, choose **Load unpacked**, and select the generated **`dist`** folder.
+Open your browser's extensions manager, enable Developer mode, choose **Load unpacked**, and select the generated **`extension`** folder.
 
 To rebuild the Windows setup on Windows:
 
@@ -89,7 +89,7 @@ To rebuild the Windows setup on Windows:
 ./scripts/build-installer.ps1
 ```
 
-This uses the Windows .NET Framework C# compiler and bundles the existing `dist` output. The setup is an unsigned local build.
+This uses the Windows .NET Framework C# compiler and bundles the existing `extension` output. The setup is an unsigned local build.
 
 </details>
 
@@ -119,7 +119,7 @@ The build removes exact source-rule duplicates and equivalent compiled network r
 - **Bundled filters:** this version uses snapshots and has no automatic filter updater.
 - **Bounded logs:** recent network matches are limited to 100 entries in worker memory, with query strings and URL fragments omitted.
 - **Shareable diagnostics:** exported summaries omit browsing URLs.
-- **Traceable builds:** each build generates `reports/build-report.json` and `dist/build-report.json` with source URLs, hashes, duplicate removal, rule counts, and exclusions. Generated reports stay out of Git.
+- **Traceable builds:** each build generates `reports/build-report.json` and `extension/build-report.json` with source URLs, hashes, duplicate removal, rule counts, and exclusions. Generated reports stay out of Git.
 
 The match counter reports **rule matches**, including exceptions and redirects. It is not an ads-blocked score.
 

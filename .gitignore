@@ -1,6 +1,7 @@
 # Dependencies, compiled extension, downloaded filter cache, and installer output
 /node_modules/
 /dist/
+/extension/
 /sources/
 /installer/build/
 /assets/icons/gapguard.ico

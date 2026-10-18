@@ -12,7 +12,7 @@ import { preprocess } from './preprocess.mjs';
 
 const root = process.cwd();
 const project = JSON.parse(await fs.readFile('package.json', 'utf8'));
-const out = path.join(root, 'dist');
+const out = path.join(root, 'extension');
 const cache = path.join(root, 'sources');
 const packaged = path.join(root, 'node_modules/@adguard/dnr-rulesets/dist/filters/edge-mv3');
 const sha = text => createHash('sha256').update(text).digest('hex');
@@ -160,4 +160,4 @@ for (const filename of ['LICENSE', 'LICENSE.txt']) {
 }
 await fs.writeFile('reports/build-report.json', JSON.stringify(report, null, 2));
 await fs.writeFile(path.join(out, 'build-report.json'), JSON.stringify(report, null, 2));
-console.log('Built dist/. Load that folder as an unpacked Edge extension.');
+console.log('Built extension/. Load that folder as an unpacked Edge extension.');

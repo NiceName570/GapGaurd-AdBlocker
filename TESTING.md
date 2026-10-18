@@ -4,7 +4,7 @@ Start with **Combined coverage ON** and **YouTube skip helper OFF**. Test only o
 
 ## 1. Confirm it loads
 
-Load the installed `extension` folder (or `dist` when building from source) using **Load unpacked** at `edge://extensions`. Open **GapGuard → Settings & tests**.
+Load the `extension` folder using **Load unpacked** at `edge://extensions`. Open **GapGuard → Settings & tests**.
 
 - Status says **Ready**.
 - Build information shows Core and Combined rule counts.

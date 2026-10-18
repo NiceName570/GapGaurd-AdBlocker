@@ -7,7 +7,7 @@ import { pathToFileURL } from 'node:url';
 import { SourceMap } from '../node_modules/@adguard/dnr-converter/dist/ruleset/source-map.js';
 import { dnrKey } from './merge.mjs';
 
-const manifest = JSON.parse(await fs.readFile('dist/manifest.json', 'utf8'));
+const manifest = JSON.parse(await fs.readFile('extension/manifest.json', 'utf8'));
 // Resolve the reader from the runtime engine, not merely from the build tool.
 // This catches a valid compiler artifact that the actual browser engine cannot read.
 const require = createRequire(import.meta.url);
@@ -26,10 +26,10 @@ assert.ok(runtimeEntry, 'Cannot resolve the runtime engine DNR reader');
 const runtime = await import(pathToFileURL(runtimeEntry).href);
 assert.equal(manifest.manifest_version, 3);
 assert.equal(manifest.declarative_net_request.rule_resources.filter(row => row.enabled).length, 1, 'Exactly one profile must be active');
-const metadata = runtime.MetadataRuleset.deserialize(await fs.readFile('dist/filters/declarative/ruleset_0/ruleset_0.json', 'utf8'));
+const metadata = runtime.MetadataRuleset.deserialize(await fs.readFile('extension/filters/declarative/ruleset_0/ruleset_0.json', 'utf8'));
 assert.throws(() => runtime.MetadataRuleset.deserialize(JSON.stringify([{ id: 1, action: { type: 'block' }, condition: { urlFilter: 'dummy.rule.adguard.com' }, metadata: { checksums: {} } }])), /metadata\.chunk/, 'Runtime must reject the legacy metadata format from the reported failure');
 for (const resource of manifest.declarative_net_request.rule_resources) {
-  const raw = await fs.readFile(path.join('dist', resource.path), 'utf8');
+  const raw = await fs.readFile(path.join('extension', resource.path), 'utf8');
   assert.equal(metadata.getChecksum(resource.id), createHash('sha256').update(raw).digest('hex'));
   const rules = JSON.parse(raw);
   const compact = runtime.parseCompactRuleset(resource.id, rules);
@@ -45,7 +45,7 @@ for (const resource of manifest.declarative_net_request.rule_resources) {
     assert.ok(Number.isInteger(rule.id) && rule.id > 0 && !ids.has(rule.id), `Invalid/duplicate ID ${rule.id}`);
     ids.add(rule.id);
     assert.ok(['block', 'allow', 'allowAllRequests', 'redirect', 'modifyHeaders', 'upgradeScheme'].includes(rule.action.type));
-    if (rule.action.redirect?.extensionPath) await fs.access(path.join('dist', rule.action.redirect.extensionPath.replace(/^\//, '')));
+    if (rule.action.redirect?.extensionPath) await fs.access(path.join('extension', rule.action.redirect.extensionPath.replace(/^\//, '')));
   }
   for (const rule of compact.declarativeRules) {
     const key = dnrKey(rule);
@@ -64,6 +64,6 @@ for (const resource of manifest.declarative_net_request.rule_resources) {
 }
 for (const file of [manifest.background.service_worker, manifest.action.default_popup, manifest.options_ui.page,
   ...manifest.content_scripts.flatMap(row => row.js), 'adguard-assistant.js', 'popup.js', 'options.js', 'style.css']) {
-  await fs.access(path.join('dist', file));
+  await fs.access(path.join('extension', file));
 }
 console.log('Package structure and rule checks passed. Live Edge testing is assigned to the user.');
