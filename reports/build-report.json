@@ -1,0 +1,339 @@
+{
+  "builtAt": "2026-10-16T23:00:48.955Z",
+  "version": "0.1.1",
+  "compilerVersion": "2.0.0",
+  "includedAssets": [
+    {
+      "url": "https://easylist.to/easylist/easyprivacy.txt",
+      "file": "easyprivacy.txt",
+      "sha256": "4fb303655ab22ad203102e938c717072a6b8d674a44f4d145176d45519859f25"
+    },
+    {
+      "url": "https://easylist.to/easylist/fanboy-annoyance.txt",
+      "file": "fanboy-annoyance.txt",
+      "sha256": "f599b14e4b62dc8997e5061e7ff918cb88ebaa38dc715a767e76c7773c9eeb63"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
+      "file": "ublock-filters.txt",
+      "sha256": "0d7ef3bd39e99b9c5daacd33a66eed006fce5b445ab8c4e34718dc5543bc4f1b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-general.txt",
+      "file": "include-filters-general.txt",
+      "sha256": "f0ba1aa1a5da4607b9c38aa762d9c16feee7771aacc3d07a16c1a4e286099f0a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt",
+      "file": "include-filters-2020.txt",
+      "sha256": "2bf0991064d5d4c4628504ce1c8aecf884f5ee1e7f4fe7b09bb362e95d9667d0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2021.txt",
+      "file": "include-filters-2021.txt",
+      "sha256": "a5bff2ec6eca28776ac6244ae20d8dc4d2d88262de2d5eb13edb3bab3849704d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2022.txt",
+      "file": "include-filters-2022.txt",
+      "sha256": "21ca4be14e23e107eecd4dc4982dc14b9c78536f778a99d02def5a01480bf920"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2023.txt",
+      "file": "include-filters-2023.txt",
+      "sha256": "e6a2492aaed8ea17a1b2d1851ed140794fde01120e77120c0a369f85b3915629"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2024.txt",
+      "file": "include-filters-2024.txt",
+      "sha256": "d13b75eac194463bc16020e5802a221d120c57179d32e0398b822bba9a1e1f40"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2025.txt",
+      "file": "include-filters-2025.txt",
+      "sha256": "22a52f8a04def6aaed8453ec4d94a8d193d7b3dcc9ed921c9b69eda50420df17"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2026.txt",
+      "file": "include-filters-2026.txt",
+      "sha256": "ceab75560286ef5d6f25dfc9bcdfccb22a1a3c1bd5711d3739338c71affa4343"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/ubo-link-shorteners.txt",
+      "file": "include-ubo-link-shorteners.txt",
+      "sha256": "b982c8306889f9babe9d2515f063be8898f46b4cfe571e8a1015aeac20aae7cb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt",
+      "file": "ublock-privacy.txt",
+      "sha256": "02769e8d53b60697b31563534200cc70607ecb96644a41e2528f6edd316abd06"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
+      "file": "include-resource-abuse.txt",
+      "sha256": "26758d49f533218b559207724a3d294d1fa74e36cdce080999bc1b7f96ad552a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt",
+      "file": "ublock-quick-fixes.txt",
+      "sha256": "0dbfc609ba741fe0bfc7838d5937ce80a1b8ef3f2d3a1d95209c9f13a0dafd0d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt",
+      "file": "ublock-unbreak.txt",
+      "sha256": "709343443acd788bc6c0b2ef10fb76f7904c6dfde69591df4768f053333ec48e"
+    }
+  ],
+  "profiles": {
+    "core": {
+      "id": 1001,
+      "uniqueSourceRules": 310931,
+      "networkRules": 199130,
+      "metadataRules": 350,
+      "regexRules": 171,
+      "sourceLists": [
+        {
+          "name": "AdGuard Base filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "9c5c30714b4f3b5360226849a4163081bb3570ab7933d7fac639cc5c1189d6e9",
+          "added": 137854,
+          "duplicates": 799
+        },
+        {
+          "name": "AdGuard Tracking Protection filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "23e0c501157d3d6fe2a1c9cbe3e19b42aa30bf3987e79a4f071c99c2203b1708",
+          "added": 120362,
+          "duplicates": 1044
+        },
+        {
+          "name": "AdGuard Cookie Notices filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "dd8702ef6a3cd747b796ab8fb2420daad107b419a8577d3768f807116478384f",
+          "added": 21901,
+          "duplicates": 18
+        },
+        {
+          "name": "AdGuard Popups filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "ee804d6c83584d68bdfd7756a07ec43310f1f10d50a7a971826f61ae80aa3c27",
+          "added": 22351,
+          "duplicates": 75
+        },
+        {
+          "name": "AdGuard Other Annoyances filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "9dfc76b41934901a15a145b094394f9cffc024c8672863f56bd8d26f9bf0d269",
+          "added": 8463,
+          "duplicates": 36
+        }
+      ],
+      "conversionErrors": 6182,
+      "unsupportedRedirects": [],
+      "unsupportedCompatibility": [],
+      "duplicateNetworkRulesRemoved": 3
+    },
+    "combined": {
+      "id": 1002,
+      "uniqueSourceRules": 410071,
+      "networkRules": 235664,
+      "metadataRules": 450,
+      "regexRules": 267,
+      "sourceLists": [
+        {
+          "name": "AdGuard Base filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "9c5c30714b4f3b5360226849a4163081bb3570ab7933d7fac639cc5c1189d6e9",
+          "added": 137854,
+          "duplicates": 799
+        },
+        {
+          "name": "AdGuard Tracking Protection filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "23e0c501157d3d6fe2a1c9cbe3e19b42aa30bf3987e79a4f071c99c2203b1708",
+          "added": 120362,
+          "duplicates": 1044
+        },
+        {
+          "name": "AdGuard Cookie Notices filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "dd8702ef6a3cd747b796ab8fb2420daad107b419a8577d3768f807116478384f",
+          "added": 21901,
+          "duplicates": 18
+        },
+        {
+          "name": "AdGuard Popups filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "ee804d6c83584d68bdfd7756a07ec43310f1f10d50a7a971826f61ae80aa3c27",
+          "added": 22351,
+          "duplicates": 75
+        },
+        {
+          "name": "AdGuard Other Annoyances filter",
+          "url": "https://github.com/AdguardTeam/AdGuardFilters",
+          "sha256": "9dfc76b41934901a15a145b094394f9cffc024c8672863f56bd8d26f9bf0d269",
+          "added": 8463,
+          "duplicates": 36
+        },
+        {
+          "name": "EasyPrivacy",
+          "url": "https://easylist.to/easylist/easyprivacy.txt",
+          "sha256": "4fb303655ab22ad203102e938c717072a6b8d674a44f4d145176d45519859f25",
+          "added": 26123,
+          "duplicates": 30220
+        },
+        {
+          "name": "Fanboy Annoyance",
+          "url": "https://easylist.to/easylist/fanboy-annoyance.txt",
+          "sha256": "f599b14e4b62dc8997e5061e7ff918cb88ebaa38dc715a767e76c7773c9eeb63",
+          "added": 46207,
+          "duplicates": 3143
+        },
+        {
+          "name": "uBlock filters",
+          "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
+          "sha256": "f9977e9257406e1a728ddc20e77606fd564396be9611d7e85c1fed191f7710a5",
+          "added": 22173,
+          "duplicates": 1044
+        },
+        {
+          "name": "uBlock privacy",
+          "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt",
+          "sha256": "9b5d14d01d5676fedca6c1aed781924f5b64b5a8e55ae758e48e066b3511613b",
+          "added": 1743,
+          "duplicates": 75
+        },
+        {
+          "name": "uBlock quick fixes",
+          "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt",
+          "sha256": "562b4cf66453effdaa50e0bc151189bb3bbec0eddd69c8f3492ffbb6c8c9371e",
+          "added": 409,
+          "duplicates": 16
+        },
+        {
+          "name": "uBlock unbreak",
+          "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt",
+          "sha256": "990b6a99cf188d89ddf98d2c7af7a8a75c0ba9bb6635ce54d46f768a2f32b2aa",
+          "added": 2485,
+          "duplicates": 57
+        }
+      ],
+      "conversionErrors": 7371,
+      "unsupportedRedirects": [
+        "||static.chartbeat.com/js/chartbeat.js$redirect=chartbeat.js,script",
+        "||static.chartbeat.com/js/chartbeat_mab.js$redirect=chartbeat.js,script",
+        "*/fuckadblock-$script,redirect=fuckadblock.js-3.2.0:5",
+        "*/fuckadblock.$script,redirect=fuckadblock.js-3.2.0:5",
+        "*/blockadblock.$script,redirect=fuckadblock.js-3.2.0:5",
+        "*/blockadblock-$script,redirect=fuckadblock.js-3.2.0:5",
+        "*/wp-adblock-$script,redirect=fuckadblock.js-3.2.0:5",
+        "||svonm.com/hd-main.js$script,redirect=hd-main.js,domain=kicker.de|myspass.de|spielaffe.de|tele5.de",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=shidurlive.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=arlinadzgn.com|idntheme.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=kurazone.net",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=megafile.io",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=kharisma-adzana.blogspot.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=abdoutech.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=firm-ware27.blogspot.com|flash-reset.blogspot.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=windowcleaningforums.co.uk",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=mysterious-dev.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=spieleklassiker.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=tsforum.pl",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=collegestash.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=ktab3ndna.com",
+        "||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js:5,domain=12thman.com|auburntigers.com|baylorbears.com|bceagles.com|bgsufalcons.com|bradleybraves.com|butlersports.com|cyclones.com|denverpioneers.com|fgcuathletics.com|fightinghawks.com|fightingillini.com|friars.com|goarmywestpoint.com|gobison.com|goblueraiders.com|gocards.com|godeacs.com|goexplorers.com|gofrogs.com|gogriffs.com|gogriz.com|gomarquette.com|gopack.com|goprincetontigers.com",
+        "||damoh.gmx.*/*$media,redirect=noop-0.1s.mp3,1p",
+        "*$media,redirect-rule=noop-0.1s.mp3,3p,domain=gmx.*|web.de",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=felanovia.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=folhabv.com.br",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=adnan-tech.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noop.js:10,domain=1shortlink.com",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs:10,domain=infolokerserang.com",
+        "||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=pandora.com,redirect=google-ima.js:10",
+        "||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xhr,redirect=googlesyndication_adsbygoogle.js:5,domain=~zipextractor.app|~kio.ac|~authenticateme.xyz",
+        "||ads.adthrive.com/sites/*/ads.min.js$redirect=adthrive_abd.js",
+        "||googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noop.js:10,domain=nsspot.herokuapp.com",
+        "||akamaized.net/audio/$media,redirect=noop-1s.mp4:10,from=open.spotify.com",
+        "||scdn.co/audio/$media,redirect=noop-1s.mp4:10,domain=open.spotify.com",
+        "||scdn.co/mp3-ad/$media,redirect=noop-1s.mp4:10,domain=open.spotify.com",
+        "||scdn.co/mp3/$media,redirect=noop-1s.mp4:10,domain=open.spotify.com",
+        "||spotifycdn.com/audio/$media,redirect=noop-1s.mp4:10,domain=open.spotify.com",
+        "||amillionads.com^$media,redirect=noop-1s.mp4:10,from=open.spotify.com",
+        "||2mdn.net^$media,redirect=noop-1s.mp4:10,domain=open.spotify.com",
+        "||adxcel.com^$media,redirect=noop-1s.mp4:10,domain=open.spotify.com",
+        "||adstudio-assets.scdn.co^$media,redirect=noop-1s.mp4:10,domain=open.spotify.com",
+        "||spotify.com/ad-logic/$media,redirect=noop-1s.mp4:10,domain=open.spotify.com",
+        "*$media,3p,redirect-rule=noop-1s.mp4:10,domain=open.spotify.com",
+        "||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js:5,domain=atozmath.com",
+        "||adclixx.net^$script,3p,redirect=nobab2.js:10",
+        "||adnetasia.com^$script,3p,redirect=nobab2.js:10",
+        "||adtrackers.net^$script,3p,redirect=nobab2.js:10",
+        "||bannertrack.net^$script,3p,redirect=nobab2.js:10",
+        "||doubleclick.net/instream/ad_status.js^$script,xhr,redirect=doubleclick_instream_ad_status.js:5",
+        "*$xhr,3p,method=head,redirect-rule=nooptext:-1,to=~adblockanalytics.com|~doubleclick.net|~pagead2.googlesyndication.com",
+        "||raw.githubusercontent.com^$media,redirect=noop-0.1s.mp3,domain=vidify.top",
+        "||cdn.mekobre.com/ads^$media,redirect=noop-0.1s.mp3,domain=mekobre.com",
+        "*$xhr,redirect-rule=nooptext:-1,to=~fundingchoicesmessages.google.com|~sentry.io,domain=hackerrank.com",
+        "||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=noop.js:6,from=tvaplus.ca",
+        "||s.nitropay.com/ads-*.js$3p,script,redirect=nitropay_ads.js",
+        "||googletagmanager.com/gtag/js$script,redirect-rule=googletagmanager_gtm.js:10,domain=satoshi-win.xyz",
+        "||google-analytics.com/analytics.js$script,xhr,redirect=google-analytics_analytics.js:5",
+        "||google-analytics.com/cx/api.js$script,redirect=google-analytics.com/cx/api.js:5",
+        "||googletagmanager.com/gtag/js$script,xhr,redirect=googletagmanager_gtm.js:5",
+        "||googletagservices.com/tag/js/gpt.js$script,xhr,redirect=googletagservices.com/gpt.js:5",
+        "||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices_gpt.js:5",
+        "||pagead2.googlesyndication.com/tag/js/gpt.js$script,redirect=googletagservices_gpt.js:5",
+        "||scorecardresearch.com/beacon.js$script,redirect=scorecardresearch.com/beacon.js:5",
+        "||google-analytics.com/ga.js$script,redirect=google-analytics.com/ga.js:5",
+        "||googletagmanager.com/gtm.js$script,redirect=googletagmanager_gtm.js:5,domain=~nerc.com",
+        "||widgets.outbrain.com/outbrain.js$script,redirect=outbrain-widget.js:5,domain=~vice.com",
+        "||google-analytics.com/analytics.js$important,script,redirect=google-analytics.com/analytics.js,domain=support.amd.com",
+        "||googletagmanager.com/gtm.js$important,script,redirect=googletagmanager.com/gtm.js,domain=support.amd.com",
+        "||jsdelivr.net^*/fp.min.js$script,redirect=fingerprint3.js:10",
+        "||g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices_gpt.js:5,domain=euronews.com,important",
+        "||adsco.re^$script,redirect=none:5,domain=poophq.com|veev.to|doods.to",
+        "||amazon-adsystem.com/aax2/amzn_ads.js$script,redirect=amazon-adsystem.com/aax2/amzn_ads.js",
+        "||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js:5,domain=abcya.com",
+        "||amazon-adsystem.com/*apstag.js^$redirect=amazon_apstag.js:5,domain=~republicbharat.com|~thelallantop.com",
+        "||aps.amazon-adsystem.com^$script,redirect=amazon_apstag.js:5",
+        "||myaccount.chicagotribune.com/assets/scripts/tag-manager/googleTag.js$script,redirect=googletagmanager.com/gtm.js,important",
+        "@@||google-analytics.com/analytics.js$script,redirect-rule=google-analytics.com/analytics.js,domain=indigenousoap.com",
+        "@@||google-analytics.com/analytics.js$script,redirect-rule=google-analytics.com/analytics.js,domain=ultimateclassicrock.com",
+        "@@||googletagmanager.com/gtm.js$script,redirect-rule=googletagmanager.com/gtm.js,domain=ultimateclassicrock.com",
+        "@@||googletagmanager.com/gtm.js$script,redirect-rule=googletagmanager.com/gtm.js,domain=autotrader.ca",
+        "@@||google-analytics.com/analytics.js$script,redirect-rule=google-analytics.com/analytics.js,domain=layrite.com",
+        "@@||google-analytics.com/analytics.js$script,redirect-rule=google-analytics.com/analytics.js:5,domain=stern.de",
+        "@@||googletagmanager.com/gtm.js$script,redirect-rule=googletagmanager_gtm.js:5,domain=stern.de",
+        "@@||googletagmanager.com/gtm.js$script,redirect-rule=googletagmanager_gtm.js:5,domain=kleinanzeigen.de",
+        "@@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect-rule=googletagservices_gpt.js:5,domain=olx.pt",
+        "||lastpass.com/assets/js/analyticsjs.js$script,redirect=google-analytics.com/analytics.js,important",
+        "@@||google-analytics.com/analytics.js$script,redirect-rule=google-analytics.com/analytics.js:5,domain=xeroshoes.com",
+        "@@||googletagmanager.com/gtag/js$script,redirect-rule=googletagmanager_gtm.js:5,domain=xeroshoes.com",
+        "@@||googletagmanager.com/gtm.js$script,redirect-rule=googletagmanager_gtm.js:5,domain=xeroshoes.com",
+        "@@||googletagmanager.com/gtag/js$script,redirect-rule=googletagmanager_gtm.js:5,domain=myshows.me",
+        "@@||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect-rule=googletagservices_gpt.js:5,domain=aibusiness.com",
+        "||mycourses.pearson.com/shared/static/*/component/ga.min.js$script,1p,redirect=google-analytics.com/analytics.js,important",
+        "||googletagmanager.com/gtag/js$script,redirect=noop.js:10,domain=scobel.pasaz24.pl",
+        "||imasdk.googleapis.com/js/sdkloader/ima3.js$script,important,redirect=google-ima.js:5,domain=abczdrowie.pl|animezone.pl|chillizet.pl|claudia.pl|echirurgia.pl|elevensports.pl|elle.pl|elleman.pl|fm.tuba.pl|focusnauka.pl|games.cdn.famobi.com|glamour.pl|grydladzieci.pl|ipla.tv|ipla.tv|kobieta.pl|meloradio.pl|mojegotowanie.pl|mojpieknyogrod.pl|money.pl|national-geographic.pl|parenting.pl|partner.redefine.pl|playpuls.pl|pluscdn.pl|polsatgo.pl|polsatnews.pl|polsatsport.pl|przyslijprzepis.pl|radioplus.pl|sadeczanin.info|tvokazje.pl|tvp.pl|twojapogoda.pl|video.onnetwork.tv|videotarget.pl|wp.pl|wtk.pl|interia.pl|www.polsatnews.pl|autocentrum.pl|~wiadomosci.wp.pl",
+        "@@||googletagmanager.com/gtag/js$script,redirect-rule=googletagmanager_gtm.js:5,domain=trovvve.com",
+        "||ccstatic.toggo.de/cc-static-files/bumper-video/$media,redirect-rule=noop-0.1s.mp3,domain=toggo.de",
+        "||flashtalking.com^*.mp4$media,redirect-rule=noop-0.1s.mp3,domain=toggo.de",
+        "||pubads.g.doubleclick.net/gampad/ads?*www.worldsurfleague.com$xhr,redirect=noop-vmap1.0.xml:5,domain=imasdk.googleapis.com",
+        "||g.doubleclick.net/tag/js/gpt.js$script,xhr,redirect=googletagservices_gpt.js:5,domain=wralsportsfan.com,important",
+        "||camel*/lib/sensorsdata.full.min.js$redirect=sensors-analytics.js"
+      ],
+      "unsupportedCompatibility": [
+        "bilibili.com#@#+js(json-prune-fetch-response, data.item.[-].business_info.ad_desc, '', /feed/rcmd)",
+        "bilibili.com##+js(json-prune-fetch-response, data.item.[-].business_info.ad_desc, , propsToMatch, /feed/rcmd)"
+      ],
+      "duplicateNetworkRulesRemoved": 200
+    }
+  },
+  "notes": [
+    "Exact source-rule duplicates are removed. Different scopes and exception rules are preserved.",
+    "Supplemental rules are coverage candidates, not demonstrated improvements until manual testing.",
+    "Semantic overlap across different patterns is not claimed to be eliminated.",
+    "Ad Remover proprietary code and subscription checks were not copied.",
+    "OSKA uses AdGuard lists already represented in the core."
+  ]
+}
