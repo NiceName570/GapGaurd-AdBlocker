@@ -1,7 +1,13 @@
 ![GapGuard — Broader filtering. One extension.](assets/branding/github-banner.png)
 
 <p align="center">
-  <img alt="Microsoft Edge" src="https://img.shields.io/badge/Microsoft_Edge-0c1218?style=flat-square&amp;logo=microsoftedge&amp;logoColor=75e1bc">
+  <strong><a href="https://github.com/NiceName570/gapgaurd/releases/download/v0.1.1/GapGuard-0.1.1-extension.zip">⬇ Download extension ZIP</a></strong> &nbsp;·&nbsp;
+  <a href="https://github.com/NiceName570/gapgaurd/releases/download/v0.1.1/GapGuard-Setup-0.1.1.exe">Windows setup EXE</a> &nbsp;·&nbsp;
+  <a href="https://github.com/NiceName570/gapgaurd/releases/tag/v0.1.1">Release notes &amp; checksums</a>
+</p>
+
+<p align="center">
+  <img alt="Chromium browsers" src="https://img.shields.io/badge/Chromium_browsers-0c1218?style=flat-square&amp;logo=googlechrome&amp;logoColor=75e1bc">
   <img alt="Manifest V3" src="https://img.shields.io/badge/Manifest-V3-75e1bc?style=flat-square&amp;labelColor=141e28">
   <img alt="Version 0.1.1" src="https://img.shields.io/badge/version-0.1.1-75e1bc?style=flat-square&amp;labelColor=141e28">
   <img alt="GPL 3.0" src="https://img.shields.io/badge/license-GPL--3.0-75e1bc?style=flat-square&amp;labelColor=141e28">
@@ -9,13 +15,14 @@
 
 <p align="center">
   <a href="#quick-start">Get started</a> &nbsp;·&nbsp;
+  <a href="#browser-compatibility">Browsers</a> &nbsp;·&nbsp;
   <a href="#your-browser-your-controls">Features</a> &nbsp;·&nbsp;
   <a href="#two-profiles-one-engine">Coverage</a> &nbsp;·&nbsp;
   <a href="TESTING.md">Testing</a> &nbsp;·&nbsp;
   <a href="#built-on-open-source">Credits</a>
 </p>
 
-GapGuard is a personal ad and tracker blocker for **Microsoft Edge**. It brings established filter lists into one package, removes exact duplicate rules, and gives you direct control over what runs on each site.
+GapGuard is a personal ad and tracker blocker for **desktop Chromium browsers**, including **Google Chrome, Microsoft Edge, Brave, Opera, Opera GX, and Vivaldi**. It brings established filter lists into one package, removes exact duplicate rules, and gives you direct control over what runs on each site.
 
 The aim is practical: find the gaps between filter sources and close them without stacking independent blocking engines.
 
@@ -33,6 +40,15 @@ The aim is practical: find the gaps between filter sources and close them withou
 **Optional:** a YouTube helper clicks visible **Skip ad** buttons during ads. It is off by default and does not prevent unskippable ads or change ordinary video playback speed.
 
 ## Quick start
+
+### Extension ZIP — Chromium browsers
+
+1. **[Download the extension ZIP](https://github.com/NiceName570/gapgaurd/releases/download/v0.1.1/GapGuard-0.1.1-extension.zip)** and extract it to a permanent folder.
+2. Open your browser's extensions manager: `chrome://extensions` in Chrome, `edge://extensions` in Edge, `brave://extensions` in Brave, `opera://extensions` in Opera / Opera GX, or `vivaldi://extensions` in Vivaldi.
+3. Enable **Developer mode**, click **Load unpacked**, and select the extracted folder containing `manifest.json`.
+4. Open GapGuard, check that it says **Ready**, and reload your websites.
+
+Keep the extracted folder in place. In other Chromium browsers, open the extensions manager from the browser menu and use its unpacked-extension loading controls.
 
 ### Windows setup
 
@@ -65,7 +81,7 @@ npm test
 
 The first build downloads supplemental filter lists and caches them in the ignored `sources/` folder. It also generates `dist/` and build reports locally. Later builds reuse that cache; a fresh clone may fetch newer supplemental filters than the published release.
 
-At `edge://extensions`, enable Developer mode, choose **Load unpacked**, and select the generated **`dist`** folder.
+Open your browser's extensions manager, enable Developer mode, choose **Load unpacked**, and select the generated **`dist`** folder.
 
 To rebuild the Windows setup on Windows:
 
@@ -76,6 +92,16 @@ To rebuild the Windows setup on Windows:
 This uses the Windows .NET Framework C# compiler and bundles the existing `dist` output. The setup is an unsigned local build.
 
 </details>
+
+## Browser compatibility
+
+GapGuard targets **desktop Chromium 121+**, Manifest V3, and the required extension APIs and network-rule capacity. The same extension ZIP is intended for compatible Chromium browsers.
+
+The Chromium browser family includes **Google Chrome, Chromium, Microsoft Edge, Brave, Opera, Opera GX, Vivaldi, Arc, ungoogled-chromium, Thorium, Yandex Browser, NAVER Whale, Avast Secure Browser, Slimjet, and Epic Privacy Browser**. Other Chromium forks may also work when they support the same APIs and unpacked extensions.
+
+**Confirmed working by the user: Microsoft Edge.** The other browsers listed are compatibility candidates, not individually tested GapGuard builds. Browser policies, engine versions, API differences, and shared rule limits can affect loading. This desktop package is not a Firefox, Safari, or mobile extension. The Windows setup currently opens Edge; use the ZIP instructions for another browser.
+
+Browser extension references: [Chrome](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world), [Brave](https://brave.com/learn/installing-chrome-extensions/), [Opera](https://help.opera.com/en/extensions/testing/), [Vivaldi](https://help.vivaldi.com/desktop/appearance-customization/extensions/), [Arc](https://resources.arc.net/hc/en-us/articles/25540117353623-What-Happens-to-Ad-Blocking-in-Arc-when-Google-upgrades-to-Manifest-V3), [Whale](https://help.whale.naver.com/en/desktop/store/), and [Epic](https://epicbrowser.com/).
 
 ## Two profiles. One engine.
 
