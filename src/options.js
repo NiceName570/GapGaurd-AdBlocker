@@ -2,8 +2,11 @@ import { $, send, message, showStatus, download } from './ui.js';
 import { cleanSettings } from './settings.js';
 let snapshot;
 let buildInfo;
-function fill(settings) {
+function fillToggles(settings) {
   for (const key of ['enabled', 'supplemental', 'youtubeRecovery']) $(key).checked = settings[key];
+}
+function fill(settings) {
+  fillToggles(settings);
   $('allowlist').value = settings.allowlist.join('\n');
   $('rules').value = settings.rules.join('\n');
 }
@@ -22,6 +25,18 @@ async function action(task) {
   controls.forEach(control => control.disabled = true);
   try { await task(); } catch (error) { message(error.message, true); }
   finally { controls.forEach(control => control.disabled = false); }
+}
+for (const key of ['enabled', 'supplemental', 'youtubeRecovery']) {
+  $(key).disabled = true;
+  $(key).addEventListener('change', () => action(async () => {
+    try {
+      Object.assign(snapshot, await send('set-toggle', { key, value: $(key).checked }));
+      showStatus(snapshot.status);
+      message('Saved automatically. Reload open webpages to apply cleanly.');
+    } finally {
+      fillToggles(snapshot.settings);
+    }
+  }));
 }
 $('save').addEventListener('click', () => action(async () => {
   await send('save', { settings: form() });
@@ -51,6 +66,7 @@ $('export-diagnostic').addEventListener('click', () => action(async () => {
 (async () => {
   $('version').textContent = chrome.runtime.getManifest().version;
   snapshot = await send('state'); fill(snapshot.settings); showStatus(snapshot.status); log();
+  for (const key of ['enabled', 'supplemental', 'youtubeRecovery']) $(key).disabled = false;
   buildInfo = await (await fetch('build-report.json')).json();
   const lines = [`Built: ${buildInfo.builtAt}`, ...Object.entries(buildInfo.profiles).map(([key, profile]) =>
     `${key}: ${profile.uniqueSourceRules.toLocaleString()} unique source rules; ${profile.networkRules.toLocaleString()} network rules; ${profile.conversionErrors} conversion notes.`)];

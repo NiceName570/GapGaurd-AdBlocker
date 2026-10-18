@@ -17,14 +17,14 @@ async function action(task) {
   const controls = [...document.querySelectorAll('button,input')];
   controls.forEach(control => control.disabled = true);
   try { await task(); await render(); }
-  catch (error) { message(error.message, true); }
+  catch (error) { try { await render(); } catch {} message(error.message, true); }
   finally { controls.forEach(control => control.disabled = false); if(snapshot) {
     $('site').disabled = !snapshot.host;
     $('picker').disabled = !snapshot.host || !snapshot.settings.enabled || isAllowed(snapshot.host, snapshot.settings.allowlist) || snapshot.status.state !== 'ready';
   } }
 }
 for (const key of ['enabled', 'supplemental', 'youtubeRecovery']) $(key).addEventListener('change', () => action(async () => {
-  await send('save', { settings: { ...snapshot.settings, [key]: $(key).checked } });
+  await send('set-toggle', { key, value: $(key).checked });
   message('Saved. Reload the webpage to apply cleanly.');
 }));
 $('site').addEventListener('click', () => action(async () => { await send('toggle-site', { host: snapshot.host }); message('Saved. Reload the webpage.'); }));

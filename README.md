@@ -1,15 +1,15 @@
 ![GapGuard — Broader filtering. One extension.](assets/branding/github-banner.png)
 
 <p align="center">
-  <strong><a href="https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.1/GapGuard-0.1.1-extension.zip">⬇ Download extension ZIP</a></strong> &nbsp;·&nbsp;
-  <a href="https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.1/GapGuard-Setup-0.1.1.exe">Windows setup EXE</a> &nbsp;·&nbsp;
-  <a href="https://github.com/NiceName570/GapGaurd-AdBlocker/releases/tag/v0.1.1">Release notes &amp; checksums</a>
+  <strong><a href="https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.2/GapGuard-0.1.2-extension.zip">⬇ Download extension ZIP</a></strong> &nbsp;·&nbsp;
+  <a href="https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.2/GapGuard-Setup-0.1.2.exe">Windows setup EXE</a> &nbsp;·&nbsp;
+  <a href="https://github.com/NiceName570/GapGaurd-AdBlocker/releases/tag/v0.1.2">Release notes &amp; checksums</a>
 </p>
 
 <p align="center">
   <img alt="Chromium browsers" src="https://img.shields.io/badge/Chromium_browsers-0c1218?style=flat-square&amp;logo=googlechrome&amp;logoColor=75e1bc">
   <img alt="Manifest V3" src="https://img.shields.io/badge/Manifest-V3-75e1bc?style=flat-square&amp;labelColor=141e28">
-  <img alt="Version 0.1.1" src="https://img.shields.io/badge/version-0.1.1-75e1bc?style=flat-square&amp;labelColor=141e28">
+  <img alt="Version 0.1.2" src="https://img.shields.io/badge/version-0.1.2-75e1bc?style=flat-square&amp;labelColor=141e28">
   <img alt="GPL 3.0" src="https://img.shields.io/badge/license-GPL--3.0-75e1bc?style=flat-square&amp;labelColor=141e28">
 </p>
 
@@ -32,7 +32,7 @@ The aim is practical: find the gaps between filter sources and close them withou
 | --- | --- |
 | **Combined coverage** | AdGuard core filtering with supplemental EasyPrivacy, Fanboy, and selected uBlock lists. |
 | **One engine** | Network blocking, cosmetic filtering, supported scriptlets, and redirects through one integrated engine. |
-| **Site-by-site control** | Pause protection for a website, add exceptions, or turn protection off globally. |
+| **Site-by-site control** | Pause protection for a website, add exceptions, or turn protection off globally. Protection switches save immediately in both the popup and Settings. |
 | **Pick it. Block it.** | Select an unwanted page element and save a cosmetic rule, or write a custom rule yourself. |
 | **Settings you can keep** | Export and import your settings, custom rules, and exceptions. |
 | **Useful diagnostics** | Inspect recent network-rule matches and export a summary when something needs fixing. |
@@ -43,7 +43,7 @@ The aim is practical: find the gaps between filter sources and close them withou
 
 ### Extension ZIP — Chromium browsers
 
-1. **[Download the extension ZIP](https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.1/GapGuard-0.1.1-extension.zip)** and extract it to a permanent folder.
+1. **[Download the extension ZIP](https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.2/GapGuard-0.1.2-extension.zip)** and extract it to a permanent folder.
 2. Open your browser's extensions manager: `chrome://extensions` in Chrome, `edge://extensions` in Edge, `brave://extensions` in Brave, `opera://extensions` in Opera / Opera GX, or `vivaldi://extensions` in Vivaldi.
 3. Enable **Developer mode**, click **Load unpacked**, and select the extracted folder containing `manifest.json`.
 4. Open GapGuard, check that it says **Ready**, and reload your websites.
@@ -52,7 +52,7 @@ Keep the extracted folder in place. In other Chromium browsers, open the extensi
 
 ### Windows setup
 
-Download **[GapGuard-Setup-0.1.1.exe](https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.1/GapGuard-Setup-0.1.1.exe)**, run it, and click **Install / update GapGuard**.
+Download **[GapGuard-Setup-0.1.2.exe](https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.2/GapGuard-Setup-0.1.2.exe)**, run it, and click **Install / update GapGuard**.
 
 The setup places the extension and its source in your user folder, then provides buttons to open Edge's extensions page, open the extension folder, and copy its path. No administrator access is requested.
 
@@ -63,7 +63,7 @@ Finish in Edge:
 3. Open GapGuard and check that it says **Ready**.
 4. Reload your open websites.
 
-For a portable option, download the **[extension ZIP](https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.1/GapGuard-0.1.1-extension.zip)**, extract it, and select the extracted folder with **Load unpacked**. Downloads and checksums are on the **[release page](https://github.com/NiceName570/GapGaurd-AdBlocker/releases/tag/v0.1.1)**.
+For a portable option, download the **[extension ZIP](https://github.com/NiceName570/GapGaurd-AdBlocker/releases/download/v0.1.2/GapGuard-0.1.2-extension.zip)**, extract it, and select the extracted folder with **Load unpacked**. Downloads and checksums are on the **[release page](https://github.com/NiceName570/GapGaurd-AdBlocker/releases/tag/v0.1.2)**.
 
 Keep the installed folder in place. Setup guides the normal Edge loading process; it does not silently install the extension or change browser policies.
 

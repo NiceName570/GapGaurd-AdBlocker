@@ -35,6 +35,7 @@ An improvement in Combined is a candidate success. A problem appearing only in C
 
 ## 4. Controls and regression checks
 
+- In **Settings**, toggle protection, Combined coverage, or the YouTube helper. Each switch saves immediately without clicking **Save settings**; reopen Settings to confirm. Unfinished rule and exception edits should remain untouched.
 - **Pause on this site** → reload → protection is paused there; another site remains protected.
 - **Resume on this site** → reload → protection returns.
 - **Block an element** → select an unwanted element → confirm through the picker → reload → rule persists. Avoid selecting meaningful navigation or content.

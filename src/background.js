@@ -96,6 +96,12 @@ browser.runtime.onMessage.addListener((message, sender) => {
       return { settings, status, host, tabId: tab?.id, count: stats.get(tab?.id) ?? 0, recent: recent.slice(-30).reverse() };
     }
     if (message.type === 'save') return serialize(async () => { await apply(cleanSettings(message.settings)); return { ok: true }; });
+    if (message.type === 'set-toggle') return serialize(async () => {
+      if (!['enabled', 'supplemental', 'youtubeRecovery'].includes(message.key)) throw new Error('Unknown protection switch.');
+      if (typeof message.value !== 'boolean') throw new Error('Protection switches must be true or false.');
+      await apply(cleanSettings({ ...settings, [message.key]: message.value }));
+      return { settings, status };
+    });
     if (message.type === 'toggle-site') return serialize(async () => {
       const host = cleanSettings({ allowlist: [message.host] }).allowlist[0];
       const matching = settings.allowlist.filter(domain => host === domain || host.endsWith(`.${domain}`));

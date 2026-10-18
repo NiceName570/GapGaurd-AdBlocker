@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "GapGuard — Personal Ad Blocker",
   "short_name": "GapGuard",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Personal ad and tracker filtering with deduplicated lists and optional recovery tools.",
   "minimum_chrome_version": "121",
   "permissions": ["storage", "unlimitedStorage", "tabs", "activeTab", "scripting", "webRequest", "webNavigation", "cookies", "declarativeNetRequest", "declarativeNetRequestFeedback"],
