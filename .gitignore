@@ -1,5 +1,50 @@
-node_modules/
-dist/
+# Dependencies, compiled extension, downloaded filter cache, and installer output
+/node_modules/
+/dist/
+/sources/
+/installer/build/
 *.zip
 *.exe
-installer/build/
+*.exe.sha256
+/SHA256SUMS.txt
+
+# Generated reports, screenshots, and local publication records
+/reports/*
+!/reports/DEPENDENCIES.md
+!/reports/2026-10-16-startup-metadata-fix.md
+/BUILD_NOTES.md
+/GITHUB_README_DRAFT.md
+/assets/branding/banner-generation.md
+
+# Logs, caches, coverage, and temporary files
+*.log
+.cache/
+.npm/
+.eslintcache
+coverage/
+.nyc_output/
+/tmp/
+/temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.pfx
+*.p12
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini

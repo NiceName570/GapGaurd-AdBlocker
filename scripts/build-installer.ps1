@@ -43,11 +43,17 @@ try {
             Add-PackageFile $file.FullName ('source/' + $relative)
         }
     }
-    foreach ($relative in @('package.json', 'package-lock.json', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'TESTING.md', '.gitignore', 'installer/GapGuardSetup.cs', 'installer/app.manifest', 'reports/build-report.json', 'reports/DEPENDENCIES.md', 'reports/dependency-audit.json')) {
+    foreach ($relative in @('package.json', 'package-lock.json', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'TESTING.md', '.gitignore', 'installer/GapGuardSetup.cs', 'installer/app.manifest', 'reports/build-report.json', 'reports/DEPENDENCIES.md')) {
         Add-PackageFile (Join-Path $taskRoot $relative) ('source/' + $relative)
     }
     Add-PackageFile (Join-Path $taskRoot 'README.md') 'source/README.md'
-    Add-PackageFile (Join-Path $taskRoot 'BUILD_NOTES.md') 'source/BUILD_NOTES.md'
+    # Local notes and audit output are optional; a fresh clone does not contain them.
+    foreach ($relative in @('BUILD_NOTES.md', 'reports/dependency-audit.json')) {
+        $optionalPath = Join-Path $taskRoot $relative
+        if (Test-Path -LiteralPath $optionalPath -PathType Leaf) {
+            Add-PackageFile $optionalPath ('source/' + $relative)
+        }
+    }
 } finally { $archive.Dispose(); $payloadStream.Dispose() }
 
 $payloadHash = (Get-FileHash -LiteralPath $payloadPath -Algorithm SHA256).Hash.ToLowerInvariant()

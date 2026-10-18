@@ -63,6 +63,8 @@ npm run check
 npm test
 ```
 
+The first build downloads supplemental filter lists and caches them in the ignored `sources/` folder. It also generates `dist/` and build reports locally. Later builds reuse that cache; a fresh clone may fetch newer supplemental filters than the published release.
+
 At `edge://extensions`, enable Developer mode, choose **Load unpacked**, and select the generated **`dist`** folder.
 
 To rebuild the Windows setup on Windows:
@@ -91,7 +93,7 @@ The build removes exact source-rule duplicates and equivalent compiled network r
 - **Bundled filters:** this version uses snapshots and has no automatic filter updater.
 - **Bounded logs:** recent network matches are limited to 100 entries in worker memory, with query strings and URL fragments omitted.
 - **Shareable diagnostics:** exported summaries omit browsing URLs.
-- **Traceable builds:** the [build report](reports/build-report.json) records source URLs, hashes, duplicate removal, rule counts, and exclusions.
+- **Traceable builds:** each build generates `reports/build-report.json` and `dist/build-report.json` with source URLs, hashes, duplicate removal, rule counts, and exclusions. Generated reports stay out of Git.
 
 The match counter reports **rule matches**, including exceptions and redirects. It is not an ads-blocked score.
 
