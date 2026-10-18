@@ -3,6 +3,7 @@
 /dist/
 /sources/
 /installer/build/
+/assets/icons/gapguard.ico
 *.zip
 *.exe
 *.exe.sha256
